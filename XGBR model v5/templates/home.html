@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Credit Score Prediction</title>
+    <style>
+        form{text-align: center}
+    </style>
+</head>
+<body>
+    <br></br>
+    <br></br>
+    <center><h1>Credit Score</h1></center>
+
+    <a></a>
+    
+<form action="/predict" method="post">
+<br></br>
+<label for="Credit_amount_group">What is the amount that you are looking to borrow?</label>
+<select name="Credit_amount_group" id="Credit_amount_group">
+     <option value="10">Below 2000</option>
+     <option value="9">Between 2001 and 4000</option>
+     <option value="8">Between 4001 and 6000</option>
+     <option value="7">Between 6001 and 8000</option> 
+     <option value="6">Between 8001 and 10000</option>   
+     <option value="5">Between 10001 and 12000</option>  
+     <option value="4">Between 12001 and 14000</option> 
+     <option value="3">Between 14001 and 16000</option> 
+     <option value="2">Between 16001 and 18000</option>
+     <option value="1">Above 18001</option>
+</select>
+
+<br></br>
+<label for="duration_group">How many installments(in months) do you require to pay back the loan?</label>
+<select name="duration_group" id="duration_group">
+     <option value="12">Below 5</option>
+     <option value="11">Between 6 and 10</option>
+     <option value="10">Between 11 and 15</option>
+     <option value="9">Between 16 and 20</option> 
+     <option value="8">Between 21 and 25</option>   
+     <option value="7">Between 26 and 30</option>  
+     <option value="6">Between 31 and 35</option> 
+     <option value="5">Between 36 and 40</option> 
+     <option value="4">Between 41 and 45</option>
+     <option value="3">Between 46 and 50</option>
+     <option value="2">Between 51 and 55</option>
+     <option value="1">Between 56 and 60</option>
+
+</select>
+
+<br></br>
+<label for="Purpose">Reason for needing a loan?</label>
+<select name="Purpose" id="Purpose">
+    <option value="electronics">Electronics</option>
+    <option value="car_new">Car(new)</option>
+    <option value="car_used">Car(used)</option>
+    <option value="furniture_equipment">Furniture equipment</option>
+    <option value="business">Business</option>
+    <option value="education">Education</option>
+    <option value="Repairs">Repairs</option>
+    <option value="domestic_appliances">Domestic appliances</option>
+    <option value="retraining">Retraining</option>
+    <option value="others">Others</option>
+</select>
+
+<br></br>
+<label for="disposible_income_group">What is your monthly income after essential costs such as rent/mortgage, bill, and car etc?</label>
+<select name="disposible_income_group" id="disposible_income_group">
+     <option value="1">Below 2000</option>
+     <option value="2">Between 2001 and 4000</option>
+     <option value="3">Between 4001 and 6000</option>
+     <option value="4">Between 6001 and 8000</option> 
+     <option value="5">Between 8001 and 10000</option>   
+     <option value="6">Between 10001 and 12000</option>  
+     <option value="7">Between 12001 and 14000</option> 
+     <option value="8">Between 14001 and 16000</option> 
+     <option value="9">Between 16001 and 18000</option>
+     <option value="10">Above 18001</option>
+</select>
+
+<br></br>
+<label for="number_of_existing_credits_at_this_bank">Do you currently have any other loans that you are paying back?</label>
+<select name="number_of_existing_credits_at_this_bank" id="number_of_existing_credits_at_this_bank">
+    <option value="5">4 and more</option>
+    <option value="4">3</option>
+    <option value="3">2</option>
+    <option value="2">1</option>
+    <option value="1">0</option>
+</select>
+
+<br></br>
+<label for="status_of_existing_checking_account">What is the status of your current main bank account?</label>
+<select name="status_of_existing_checking_account" id="status_of_existing_checking_account">
+    <option value="3">Above zero</option>
+    <option value="2">Below zero</option>
+    <option value="1">None</option>
+</select>
+
+<br></br>
+<label for="credit_history">Have you responsibly repaid any loans in the past?</label>
+<select name="credit_history" id="credit_history">
+    <option value="4">Never taken a loan</option>
+    <option value="3">All credit paid in full</option>
+    <option value="2">No missed payments of existing installements</option>
+    <option value="1">Delayed paying of installments</option>
+</select>
+
+
+<br></br>
+<label for="other_installment_plans">Do you currently have any other payment plans with installments due? Credit Cards, Store Cards etc</label>
+<select name="other_installment_plans" id="other_installment_plans">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+</select>
+
+
+<br></br>
+<label for="occupation_new">Are you currently employed?</label>
+<select name="occupation_new" id="occupation_new">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+</select>
+
+<br></br>
+<label for="employment_length">How long have you been at your current employment?</label>
+<select name="employment_length" id="employment_length">
+    <option value="5">More than 7 years</option>
+    <option value="4">4-7 years</option>
+    <option value="3">1-4 years</option>
+    <option value="2">Less than 1 year</option>
+    <option value="1">Not in employement</option>
+</select>
+
+<br></br>
+<label for="housing">In your current place of residence are you a homeowner, renting, or living there for free?</label>
+<select name="housing", id="housing">
+    <option value="3">Own</option>
+    <option value="2">Rent</option>
+    <option value="1">Live in for free</option>
+</select>
+
+<br></br>
+<label for="number_of_dependents">How many people are currently dependent on your income for support? Spouses, offspring, live in family</label>
+<select name="number_of_dependents" id="number_of_dependents">
+    <option value="3">2 and more</option>
+    <option value="2">1</option>
+    <option value="1">0</option>
+</select>
+
+
+<br></br>
+<br></br>
+<input id="submit" type="submit" value="Click here to get Credit Score", class="btn btn-secondary"></input>
+<br></br>
+<h1 id="predictionResult">{{prediction_text}}</h1>
+
+
+<center> 
+<button id="clearButton">Restart</button>
+
+    <script>
+        document.getElementById("clearButton").addEventListener("click", function() {
+            // Clear the prediction result area
+            document.getElementById("predictionResult").innerText = "";
+        });
+    </script>
+</center>
+
+</body>
+
+
+
+</html>
